@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dynamic Text Updater</title>
+    <link rel="stylesheet" href="style.css">
+
+</head>
+
+<body>
+
+    <h1>Enter Text</h1>
+
+    <div>
+        <input type="text" id="user-input" placeholder="Type something here...">
+        <button id="view">view</button>
+    </div>
+
+    <p id="display-area">Wait answer is update .</p>
+
+    <script>
+        const inputField = document.getElementById('user-input');
+        const button = document.getElementById('view');
+        const paragraph = document.getElementById('display-area');
+
+        button.addEventListener('click', function () {
+            const currentText = inputField.value;
+            paragraph.innerText = currentText;
+        });
+    </script>
+
+</body>
+
+</html>
